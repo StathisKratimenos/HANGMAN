@@ -13,7 +13,7 @@ for i in range(8):
     user_answer = input(message)
 
     founded = [m.start() for m in re.finditer(user_answer, corect_answer)]
-    if len(founded) == 0 or len(founded) == len(founded):
+    if len(founded) == 0 or len(founded) == len(masked_word):
         print("No such letter in the word")
     else:
         for x in founded:
