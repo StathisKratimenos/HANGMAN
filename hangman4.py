@@ -1,26 +1,35 @@
 import random
-import re
-
-word = ['pythona', 'java', 'kotlina', 'javascript']
-corect_answer = random.choice(word)
-masked_word = len(corect_answer)*'-'
-message = 'Input a letter: '
 
 print("H A N G M A N")
+word = ['python', 'java', 'kotlin', 'javascript']
+
+def listToString(l):
+    strWord = ''
+    for i in l:
+        strWord += i
+    return  strWord
+
+word_random = random.choice(word)
+wordTolist = list(word_random)
+
+maskedWord = len(word_random)*'-'
+print(maskedWord)
 
 for i in range(8):
-    print(masked_word)
-    user_answer = input(message)
+    print('Input a letter:')
+    x = input()
+    maskedWord = list(maskedWord)
+    for j in range(len(wordTolist)):
+        if x == wordTolist[j]:
+            maskedWord[j] = x
 
-    founded = [m.start() for m in re.finditer(user_answer, corect_answer)]
-    if len(founded) == 0 or len(founded) == len(masked_word):
+    if x not in wordTolist:
         print("No such letter in the word")
-    else:
-        for x in founded:
-            masked_word = masked_word[:x] + user_answer + masked_word[x + 1]
-        print(founded)
+
+    print(listToString(maskedWord))
+
 
 print('Thanks for playing!')
 print("We'll see how well you did in the next stage")
 
-
+#csdacacascavsavsvsvsvsdvsv
