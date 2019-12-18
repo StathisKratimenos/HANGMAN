@@ -32,7 +32,4 @@ for i in range(8):
 print('Thanks for playing!')
 print("We'll see how well you did in the next stage")
 
-#csdacacascavsavsvsvsvsdvsv
-#test 2 must branch
-#vsvsvs
-#sbsbs
+
